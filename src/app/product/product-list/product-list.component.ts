@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProducto } from '../producto';
 
 @Component({
   selector: 'app-product-list', //manera de llamar a otros componentes 
@@ -18,7 +19,7 @@ export class ProductListComponent
     this.muestraImg = !this.muestraImg;
   }
 
-  productos:any[] = 
+  productos:IProducto[] = 
   [
     {
       "productoId":1,
@@ -32,7 +33,7 @@ export class ProductListComponent
     },
     {
       "productoId":2,
-      "Modelo": 'lamborghini diablo',
+      "Modelo": 'Lamborghini Diablo',
       "Descripcion": "2 puertas",
       "year": "30 Junio 2024",
       "Precio": 2000000,
