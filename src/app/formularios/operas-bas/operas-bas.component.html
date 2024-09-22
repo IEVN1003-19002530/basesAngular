@@ -3,16 +3,16 @@
     <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Numero 1:</label>
-          <input type="number" class="form-control" [(ngModel)]='num1' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pon un numero">
+          <input type="" class="form-control" [(ngModel)]='num1' name="num1" placeholder="Pon un numero">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Numero 2:</label>
-          <input type="number" class="form-control" [(ngModel)]='num2' id="exampleInputPassword1" placeholder="Pon otro Numero">
+          <input type="" class="form-control" [(ngModel)]='num2'name="num2" placeholder="Pon otro Numero">
         </div>
-        <button (click)="sumar()" class="btn btn-primary">Submit</button>
+        <button (click)="sumar()" class="btn btn-primary">Calcular</button>
       </form>
 
       <div>
-        El resultado es: {{this.resultado}}
+        El resultado es: {{resultado}}
       </div>
 </div>
