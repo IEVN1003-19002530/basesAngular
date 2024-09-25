@@ -1,1 +1,46 @@
-<p>cinepolis-angular works!</p>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinépolis</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Cinépolis</div>
+        <div class="logo">
+        </div>
+        <div class="box">
+            <section>
+                <h3>Entradas</h3>
+                <label for="nombre">Nombre:</label>
+                <input type="text" [(ngModel)]='nombre' id="nombre" name="nombre">
+                <label for="cantidad">Cantidad Compradores: </label>
+                <input type="number" [(ngModel)]='personas' id="cantidad" name="cantidad">
+
+                <label>Tarjeta Cinepolis:</label>
+                <div class="radio-group">
+                    <input type="checkbox" id="si" [(ngModel)]='tarjeta' name="cineco" value="si">
+                    <label for="si">Sí</label>
+                </div>
+
+                <label for="boletos">Cantidad de Boletos:</label>
+                <input type="number" [(ngModel)]='boletosT' id="boletos" name="boletos">
+            </section>
+            <section>
+                <h3>Salidas</h3>
+                <label for="pago">Valor a Pagar:{{total}} {{mensaje}}</label>
+                <input type="text" [(ngModel)]='total' id="pago" name="pago" readonly>
+            </section>
+        </div>
+        <div class="actions">
+            <button type="button" (click)="calcular()">Procesar</button>
+            <button type="button">Salir</button>
+        </div>
+        <div class="footer">
+            <p>© Cinépolis - La Capital del Cine</p>
+        </div>
+    </div>
+</body>
+</html>

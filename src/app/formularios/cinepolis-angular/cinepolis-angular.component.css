@@ -1,0 +1,58 @@
+body {
+    background-color: #003399;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.logo {
+    margin-bottom: 20px;
+}
+.box {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0044cc;
+    border: 1px solid #fff;
+    padding: 20px;
+    width: 500px;
+    margin-bottom: 20px;
+}
+.box section {
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.radio-group {
+    margin-bottom: 10px;
+}
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.footer {
+    margin-top: 20px;
+}
