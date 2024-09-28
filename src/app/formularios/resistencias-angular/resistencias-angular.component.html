@@ -1,0 +1,87 @@
+<form [formGroup]="resistenciaForm">
+  <div class="container">
+    <label for="color1">Primera Banda:</label>
+    <select formControlName="color1">
+      <option value="Negro">Negro</option>
+      <option value="Cafe">Café</option>
+      <option value="Rojo">Rojo</option>
+      <option value="Naranja">Naranja</option>
+      <option value="Amarillo">Amarillo</option>
+      <option value="Verde">Verde</option>
+      <option value="Azul">Azul</option>
+      <option value="Violeta">Violeta</option>
+      <option value="Gris">Gris</option>
+      <option value="Blanco">Blanco</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <label for="color2">Segunda Banda:</label>
+    <select formControlName="color2">
+      <option value="Negro">Negro</option>
+      <option value="Cafe">Café</option>
+      <option value="Rojo">Rojo</option>
+      <option value="Naranja">Naranja</option>
+      <option value="Amarillo">Amarillo</option>
+      <option value="Verde">Verde</option>
+      <option value="Azul">Azul</option>
+      <option value="Violeta">Violeta</option>
+      <option value="Gris">Gris</option>
+      <option value="Blanco">Blanco</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <label for="color3">Tercera Banda (Multiplicador):</label>
+    <select formControlName="color3">
+      <option value="Negro">Negro</option>
+      <option value="Cafe">Café</option>
+      <option value="Rojo">Rojo</option>
+      <option value="Naranja">Naranja</option>
+      <option value="Amarillo">Amarillo</option>
+      <option value="Verde">Verde</option>
+      <option value="Azul">Azul</option>
+      <option value="Violeta">Violeta</option>
+      <option value="Gris">Gris</option>
+      <option value="Blanco">Blanco</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <label>Tolerancia:</label>
+    <input type="radio" id="oro" value="oro" formControlName="tolerancia">
+    <label for="oro">Dorado 5%</label>
+    <input type="radio" id="plata" value="plata" formControlName="tolerancia">
+    <label for="plata">Plata 10%</label>
+  </div>
+
+  <div class="container">
+    <button class="button" type="button" (click)="registrar()">Registrar</button>
+  </div>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Primera Banda</th>
+      <th>Segunda Banda</th>
+      <th>Tercera Banda</th>
+      <th>Tolerancia</th>
+      <th>Valor</th>
+      <th>Valor Mínimo</th>
+      <th>Valor Máximo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let resultado of resultados">
+      <td [ngStyle]="getCellStyle(resultado.color1)">{{ resultado.color1 }}</td>
+      <td [ngStyle]="getCellStyle(resultado.color2)">{{ resultado.color2 }}</td>
+      <td [ngStyle]="getCellStyle(resultado.color3)">{{ resultado.color3 }}</td>
+      <td [ngStyle]="getCellStyle(resultado.tolerancia)">{{ resultado.tolerancia }}</td> <!-- Color dinámico aplicado aquí -->
+      <td>{{ resultado.valor }}</td>
+      <td>{{ resultado.valorMinimo }}</td>
+      <td>{{ resultado.valorMaximo }}</td>
+    </tr>
+  </tbody>
+</table>
+
